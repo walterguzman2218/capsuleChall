@@ -1,0 +1,8 @@
+IP                      PORT                    SERVICE                 VERSION
+
+
+172.28.128.100		3269			globalcatLDAPssl
+			
+172.28.128.100		636			ldapssl
+	
+

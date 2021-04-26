@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91SVN scan initiated Thu Apr 22 18:06:43 2021 as: nmap -Pn -n -iL hosts/targets.txt -p 0-65535 -sV -A -oA services/full-sweep -&#45;min-rate 5000 -->
+<nmaprun scanner="nmap" args="nmap -Pn -n -iL hosts/targets.txt -p 0-65535 -sV -A -oA services/full-sweep -&#45;min-rate 5000" start="1619132803" startstr="Thu Apr 22 18:06:43 2021" version="7.91SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1619132861" percent="55.14" remaining="48" etc="1619132908"/>
+<taskprogress task="Connect Scan" time="1619132890" percent="82.58" remaining="19" etc="1619132908"/>
+<taskprogress task="Service scan" time="1619132925" percent="67.50" remaining="8" etc="1619132933"/>
+<taskprogress task="Service scan" time="1619132968" percent="90.00" remaining="7" etc="1619132975"/>
+<taskprogress task="NSE" time="1619132968" percent="49.06" remaining="0" etc="1619132968"/>
+<taskprogress task="NSE" time="1619132973" percent="99.31" remaining="1" etc="1619132973"/>
+<taskprogress task="NSE" time="1619133001" percent="99.93" remaining="1" etc="1619133001"/>
+<taskprogress task="NSE" time="1619133003" percent="99.93" remaining="1" etc="1619133003"/>
+<host starttime="1619132803" endtime="1619133011"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.28.128.100" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65514">
+<extrareasons reason="no-response" count="65514" proto="tcp" ports="0-21,23-52,54-87,89-134,136-138,140-388,390-444,446-463,465-592,594-635,637-3267,3270-3388,3390-5984,5986-9388,9390-49665,49668,49671,49673-49684,49686-53367,53369-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="for_Windows_8.0" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:for_windows_8.0</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 76:2d:98:1f:fa:34:04:b8:f7:00:96:0e:4d:ef:2c:10 (RSA)&#xa;  256 3e:bf:61:40:34:3c:c0:be:68:95:cd:ba:c9:d9:b2:ca (ECDSA)&#xa;  256 03:9d:11:6d:69:41:11:57:f9:73:f0:2f:15:ce:3a:8e (ED25519)"><table>
+<elem key="bits">3072</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDICwATRBr2+B703K+mmhdRf67ERf0AavqFzxQWqybdnoGxtYihXlDE5NAd9ACY7ZgvjrgKwgaOrQX1i4+c5azKk0S+VHEJ+tPM2XN8jCULxAst15VaFExzW3H3GLoa7WSIDYQFWoPN6wUW+axeT6s0g9SQe1cpBoXdJD1C5Fyyar6RCPm/0y57xTBuEp60OOprX54MJGfwhhj2jPVua7NTVxCd9Ge9IjRuQllVt3IxJybh6nee3Jnz4nZbYbfLhpWyO0HXyUWeRa/KINCA1wxaOVVUOz+fOkLfRSxCxBsJMhQC/RyregG6uNCCnb6MZJ8k5bggkKoXSaVC9CbKHp6ykWknOLwgH2lbzO+oYqhYvOoQTGtkO5DyA2oVv6QXCp5bR93SBkxx4O/sjD1t4wB3hbvN3JLVtj1cUBmQaySugGECjRqSVfFfYDfgvn+2SnRN0wQzM8XuS/Wuu5TSIL9Ma46NAUfes95nZx5wrPc1J4a1MWoyv+ZrVgOlU46/XTM=</elem>
+<elem key="fingerprint">762d981ffa3404b8f700960e4def2c10</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHFYKBwm3o8CcCr98gMXxniAZXRibwrUSAdPE99egt/bv3/TIArXBBrVLr2eeLvKHvF5hosIqQlbxUaUcLThK9E=</elem>
+<elem key="fingerprint">3ebf6140343cc0be6895cdbac9d9b2ca</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIFZ38ae6xGHTXP9MDz2oSO2bfvO8U+aSt8IA/7recUYk</elem>
+<elem key="fingerprint">039d116d69411157f973f02f15ce3a8e</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2021-04-22 23:08:35Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: capsulecorp.local0., Site: Default-First-Site-Name" hostname="GOKU" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: capsulecorp.local0., Site: Default-First-Site-Name" hostname="GOKU" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: CAPSULECORP&#xa;  NetBIOS_Domain_Name: CAPSULECORP&#xa;  NetBIOS_Computer_Name: GOKU&#xa;  DNS_Domain_Name: capsulecorp.local&#xa;  DNS_Computer_Name: goku.capsulecorp.local&#xa;  DNS_Tree_Name: capsulecorp.local&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2021-04-22T23:09:34+00:00"><elem key="Target_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Domain_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Computer_Name">GOKU</elem>
+<elem key="DNS_Domain_Name">capsulecorp.local</elem>
+<elem key="DNS_Computer_Name">goku.capsulecorp.local</elem>
+<elem key="DNS_Tree_Name">capsulecorp.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2021-04-22T23:09:34+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=goku.capsulecorp.local&#xa;Not valid before: 2021-04-20T20:02:02&#xa;Not valid after:  2021-10-20T20:02:02"><table key="subject">
+<elem key="commonName">goku.capsulecorp.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">goku.capsulecorp.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">D493B0178BD9E686FB0D830ECC849F7D4C19CE3E45F7AAF61538E4FDC496A8160EE2AE7F4B006B00727BC248830A77618A2EBB7383431A1385F1620375EE5FC32C592570C3AF1F12076A3101D4BE673BB4C1FF7F6DDA5E1D0E7F4F31440E3BE7BD8BC0EBC0F9D38A0F914A2BFF546A6A608A313AA68F75CB43B9F5C41211E8606C059581930A75A03106FFE9AF456C1E09C39E7A226A465D7187833E520E5E47C870F4225C928232FCA72CA72F78032DFDA65B50608483F4159E826B91668D98D89DD3F8B38474D0CC87AB90A92C2BA245A6603B512DDC1301782603E4CD6E27F554FC09AE6339F7491C63FB9768F001EA090AEAAF1445D9C60AF34C361D6E91</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-04-20T20:02:02</elem>
+<elem key="notAfter">2021-10-20T20:02:02</elem>
+</table>
+<elem key="md5">2b56671d74284587ce9648e268aff783</elem>
+<elem key="sha1">e800ac6ef765f9a58e1a42334609acb2bcede6cc</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC8DCCAdigAwIBAgIQXis3gdF+pKlBg7TpY9Z72jANBgkqhkiG9w0BAQsFADAh&#xa;MR8wHQYDVQQDExZnb2t1LmNhcHN1bGVjb3JwLmxvY2FsMB4XDTIxMDQyMDIwMDIw&#xa;MloXDTIxMTAyMDIwMDIwMlowITEfMB0GA1UEAxMWZ29rdS5jYXBzdWxlY29ycC5s&#xa;b2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANSTsBeL2eaG+w2D&#xa;DsyEn31MGc4+Rfeq9hU45P3ElqgWDuKuf0sAawBye8JIgwp3YYouu3ODQxoThfFi&#xa;A3XuX8MsWSVww68fEgdqMQHUvmc7tMH/f23aXh0Of08xRA47572LwOvA+dOKD5FK&#xa;K/9UampgijE6po91y0O59cQSEehgbAWVgZMKdaAxBv/pr0VsHgnDnnoiakZdcYeD&#xa;PlIOXkfIcPQiXJKCMvynLKcveAMt/aZbUGCEg/QVnoJrkWaNmNid0/izhHTQzIer&#xa;kKksK6JFpmA7US3cEwF4JgPkzW4n9VT8Ca5jOfdJHGP7l2jwAeoJCuqvFEXZxgrz&#xa;TDYdbpECAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQw&#xa;MA0GCSqGSIb3DQEBCwUAA4IBAQBkqJpghqjYy2bw0n6IzbxwqY2Af2kE2BcULn7c&#xa;ralvKctNIFV5nnuL10KYkBJ91JjnNuS0X4TMcmgADsyQ+Up2W+dpmD29I7RcJoC9&#xa;j2kgpVGgH1vS++0v9lZcPesEmL9m9oqZlqqNDKMdt1jZAen8DGFKQ5TxRFJArZET&#xa;XpMsLyIMFDlLlFxtfQNEKWClSldj5QbHNhxNuBy6mrdmiu+LIPYCu64jUFo/sJVj&#xa;6gcNkeD1IIr2dysSZgL8I85e4XtmnholDO3A3ipLGkqSy/+8bj86YhxiSOBAhM4f&#xa;ei+qVbvbElN1SX2yODL2kqYYmwIiotNiou14CwR087ECVo1n&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-04-22T23:10:12+00:00; +1s from scanner time."><elem key="delta">1.0</elem>
+<elem key="date">2021-04-22T23:10:12+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49670"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49672"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49685"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="53368"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: GOKU, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:4e:b7:04 (Oracle VirtualBox virtual NIC)"/><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled and required"><table key="3.1.1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-04-22T23:09:31&#xa;  start_date: N/A"><elem key="date">2021-04-22T23:09:31</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="2191" rttvar="1588" to="100000"/>
+</host>
+<host starttime="1619132803" endtime="1619133011"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.28.128.101" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65527">
+<extrareasons reason="no-response" count="65527" proto="tcp" ports="0-79,81-444,446-1800,1802-2102,2104,2106,2108-3388,3390-5984,5986-49694,49696-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1801"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msmq" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2103"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="2105"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="2107"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: CAPSULECORP&#xa;  NetBIOS_Domain_Name: CAPSULECORP&#xa;  NetBIOS_Computer_Name: GOHAN&#xa;  DNS_Domain_Name: capsulecorp.local&#xa;  DNS_Computer_Name: gohan.capsulecorp.local&#xa;  DNS_Tree_Name: capsulecorp.local&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2021-04-22T23:09:31+00:00"><elem key="Target_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Domain_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Computer_Name">GOHAN</elem>
+<elem key="DNS_Domain_Name">capsulecorp.local</elem>
+<elem key="DNS_Computer_Name">gohan.capsulecorp.local</elem>
+<elem key="DNS_Tree_Name">capsulecorp.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2021-04-22T23:09:31+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=gohan.capsulecorp.local&#xa;Not valid before: 2021-04-20T21:11:35&#xa;Not valid after:  2021-10-20T21:11:35"><table key="subject">
+<elem key="commonName">gohan.capsulecorp.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">gohan.capsulecorp.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BD0F0FC5388B320B324DB421166B535602D20538ADEAE95FBA62C18E4794B949AD6F05EC3D910DF5E232AC141B8AAA8CED08F88325E838392B897541763612D47BB087F705E5E659B49DB8BC30E1C5F88A5966FF5069956DAF6EA0F691DAD6CD4046066A68E4C7CB2240164B01FD164ED7D39D33F0FD824973F22DB35D8F51FA2CD25DC954567613A44BE877486C4362B7E91BCAC8F6BBEE7AE47ED8C8C8B131DB9F5CE35908A42E71B67C662A29AF939983985442D77EA04DD54F00C4172043458F98A3BC606EC84A86F820944DDEB0E14FD5BB032EDBB9968F268AE138A6453B53938371B68F89532C7291C7E94F0E3FF66C600E2254EC7B7ED2465E11E871</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-04-20T21:11:35</elem>
+<elem key="notAfter">2021-10-20T21:11:35</elem>
+</table>
+<elem key="md5">758d6791419553eba719020f7bc0c671</elem>
+<elem key="sha1">2837322ea929ec5f91bfd6bca99316e9187f36c5</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC8jCCAdqgAwIBAgIQF7/yjAM28ZdBkZT6YCHpFDANBgkqhkiG9w0BAQsFADAi&#xa;MSAwHgYDVQQDExdnb2hhbi5jYXBzdWxlY29ycC5sb2NhbDAeFw0yMTA0MjAyMTEx&#xa;MzVaFw0yMTEwMjAyMTExMzVaMCIxIDAeBgNVBAMTF2dvaGFuLmNhcHN1bGVjb3Jw&#xa;LmxvY2FsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvQ8PxTiLMgsy&#xa;TbQhFmtTVgLSBTit6ulfumLBjkeUuUmtbwXsPZEN9eIyrBQbiqqM7Qj4gyXoODkr&#xa;iXVBdjYS1Huwh/cF5eZZtJ24vDDhxfiKWWb/UGmVba9uoPaR2tbNQEYGamjkx8si&#xa;QBZLAf0WTtfTnTPw/YJJc/Its12PUfos0l3JVFZ2E6RL6HdIbENit+kbysj2u+56&#xa;5H7YyMixMdufXONZCKQucbZ8Ziopr5OZg5hUQtd+oE3VTwDEFyBDRY+Yo7xgbshK&#xa;hvgglE3esOFP1bsDLtu5lo8miuE4pkU7U5ODcbaPiVMscpHH6U8OP/ZsYA4iVOx7&#xa;ftJGXhHocQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMC&#xa;BDAwDQYJKoZIhvcNAQELBQADggEBAFTGqgT5rwuhItBW/BIhtuUyin3qsUTFoFdY&#xa;olz8ar5k/x76vkBoRSqJHARMPpT4sBdR3kt04cuYxIeC9IIWbx+csnVEYKgLwY/Q&#xa;92AsQMzOuWP54cpSt4g+stBi24OlOk/zRqO7cS21kddyWXZVHCm6hLDyJ5nwIVmX&#xa;6XmcLpB8KjasVZbJrElnK/+YUC421kL3qEx+YfStZlHmGG0AbjReO9QOWAgeepdl&#xa;CDIw7sYNxe9NqrXoxL20ide8XZC+DCw+l5sjgPrYnVzl1ZrDzpRZx1Bk6Ti5ewcV&#xa;/1wqMVaMiIUxZ6DRXBK1lr+a3D/huzUTOqBoSP0xvY0Nez3Pz9c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-04-22T23:10:12+00:00; +1s from scanner time."><elem key="delta">1.0</elem>
+<elem key="date">2021-04-22T23:10:12+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49695"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="ms-sql-info" output="&#xa;  Windows server name: GOHAN&#xa;  172.28.128.101\CAPSULECORPDB: &#xa;    Instance name: CAPSULECORPDB&#xa;    Version: &#xa;      name: Microsoft SQL Server 2017 RTM&#xa;      Product: Microsoft SQL Server 2017&#xa;      Service pack level: RTM&#xa;    Clustered: false"><elem key="Windows server name">GOHAN</elem>
+<table key="172.28.128.101\CAPSULECORPDB">
+<elem key="Instance name">CAPSULECORPDB</elem>
+<table key="Version">
+<elem key="name">Microsoft SQL Server 2017 RTM</elem>
+<elem key="Product">Microsoft SQL Server 2017</elem>
+<elem key="Service pack level">RTM</elem>
+</table>
+<elem key="Clustered">false</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-04-22T23:09:30&#xa;  start_date: N/A"><elem key="date">2021-04-22T23:09:30</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="2026" rttvar="2002" to="100000"/>
+</host>
+<host starttime="1619132803" endtime="1619133011"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.28.128.102" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-response" count="65532" proto="tcp" ports="0-444,446-3388,3390-5984,5986-8079,8081-65535"/>
+</extraports>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: CAPSULECORP&#xa;  NetBIOS_Domain_Name: CAPSULECORP&#xa;  NetBIOS_Computer_Name: VEGETA&#xa;  DNS_Domain_Name: capsulecorp.local&#xa;  DNS_Computer_Name: vegeta.capsulecorp.local&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2021-04-22T23:09:31+00:00"><elem key="Target_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Domain_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Computer_Name">VEGETA</elem>
+<elem key="DNS_Domain_Name">capsulecorp.local</elem>
+<elem key="DNS_Computer_Name">vegeta.capsulecorp.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2021-04-22T23:09:31+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=vegeta.capsulecorp.local&#xa;Not valid before: 2021-04-20T21:25:52&#xa;Not valid after:  2021-10-20T21:25:52"><table key="subject">
+<elem key="commonName">vegeta.capsulecorp.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">vegeta.capsulecorp.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C6204CF9DDDD85E40DBA74A4E579A77DB46D545905B892607537C12E68C612291899836540AAC98B0628C4CD5B1A6E1E2EBE9AC21D5718D778E13808AE82AA05B16C998A4239F5520AB0F8C3B83BABA066A7C628A6033B8A4F8746D4C444D46F2143030CE297E42FA574BBE4E0AB6345915B18593F219007671E4F606340161282FB63B0C266395F7AEB7917E9B9C69901069A36BDDF200BECBA36ADA1B42A8843158F5E8FB1B716D4724B2E9D7304C61A5CCBC1B6139526A623BE7E9548465EA7D1FD6940372A8404BD233EB59A7DA5FB9BF6A83F09FD8962FE08C16A0BCEE9EF6CD661EADF0CEE0560BB0AAF48503CDB41D756063D1A24C5E304E0734CD5CD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-04-20T21:25:52</elem>
+<elem key="notAfter">2021-10-20T21:25:52</elem>
+</table>
+<elem key="md5">50b549c478ba24860632b8b0df942775</elem>
+<elem key="sha1">7a092f3344bf9280ef84d746e897a06211b6dced</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC9DCCAdygAwIBAgIQHMuWZGs1G6xAcBRrhA+I8jANBgkqhkiG9w0BAQsFADAj&#xa;MSEwHwYDVQQDExh2ZWdldGEuY2Fwc3VsZWNvcnAubG9jYWwwHhcNMjEwNDIwMjEy&#xa;NTUyWhcNMjExMDIwMjEyNTUyWjAjMSEwHwYDVQQDExh2ZWdldGEuY2Fwc3VsZWNv&#xa;cnAubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGIEz53d2F&#xa;5A26dKTlead9tG1UWQW4kmB1N8EuaMYSKRiZg2VAqsmLBijEzVsabh4uvprCHVcY&#xa;13jhOAiugqoFsWyZikI59VIKsPjDuDuroGanxiimAzuKT4dG1MRE1G8hQwMM4pfk&#xa;L6V0u+Tgq2NFkVsYWT8hkAdnHk9gY0AWEoL7Y7DCZjlfeut5F+m5xpkBBpo2vd8g&#xa;C+y6Nq2htCqIQxWPXo+xtxbUcksunXMExhpcy8G2E5UmpiO+fpVIRl6n0f1pQDcq&#xa;hAS9Iz61mn2l+5v2qD8J/Yli/gjBagvO6e9s1mHq3wzuBWC7Cq9IUDzbQddWBj0a&#xa;JMXjBOBzTNXNAgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQE&#xa;AwIEMDANBgkqhkiG9w0BAQsFAAOCAQEAXiqaqIW9sCyu5eGdpGfABhRtzxWQ1uRs&#xa;Oqc6JKSUkVFP9nZ0pwyD7TSPOHpOJwv3bV4LGfX7Gx3uHYd7rNsXnhZxqtFo3fIM&#xa;OdNVbo+2s0a6fZWPSHJ2bB8lSTKcpl6V9Z36iQq9FsAwRGdPitEjiO1qJ28PJixJ&#xa;dyfCNGRf14QP7/nYnSI5AZMY/4PWeqkQ4phTCfDjMoSZXnesQ9QRYTHWyKr5PQ0h&#xa;iWp6Y+Vigs0dMbmivNZu5gTDYRnNdbDYBhXpGZ6n+Vc79oPdkwu3SfyF9lXBHA9N&#xa;EHUkPJIY1kakqG3dDIErWAHIXUs5iSHh4svedqddVjxcjDQpuAaFwg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-04-22T23:10:12+00:00; +1s from scanner time."><elem key="delta">1.0</elem>
+<elem key="date">2021-04-22T23:10:12+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Jetty" version="9.4.27.v20200227" method="probed" conf="10"><cpe>cpe:/a:mortbay:jetty:9.4.27.v20200227</cpe></service><script id="http-robots.txt" output="1 disallowed entry &#xa;/"/><script id="http-server-header" output="Jetty(9.4.27.v20200227)"><elem>Jetty(9.4.27.v20200227)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html;charset=utf-8)."></script></port>
+</ports>
+<hostscript><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-04-22T23:09:36&#xa;  start_date: N/A"><elem key="date">2021-04-22T23:09:36</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="2157" rttvar="2383" to="100000"/>
+</host>
+<host starttime="1619132803" endtime="1619133011"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.28.128.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-response" count="65531" proto="tcp" ports="0-444,446-3388,3390-5984,5986-8008,8010-8079,8081-65535"/>
+</extraports>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: CAPSULECORP&#xa;  NetBIOS_Domain_Name: CAPSULECORP&#xa;  NetBIOS_Computer_Name: TRUNKS&#xa;  DNS_Domain_Name: capsulecorp.local&#xa;  DNS_Computer_Name: trunks.capsulecorp.local&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2021-04-22T23:09:33+00:00"><elem key="Target_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Domain_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Computer_Name">TRUNKS</elem>
+<elem key="DNS_Domain_Name">capsulecorp.local</elem>
+<elem key="DNS_Computer_Name">trunks.capsulecorp.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2021-04-22T23:09:33+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=trunks.capsulecorp.local&#xa;Not valid before: 2021-04-20T21:44:05&#xa;Not valid after:  2021-10-20T21:44:05"><table key="subject">
+<elem key="commonName">trunks.capsulecorp.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">trunks.capsulecorp.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">AD645C3AE29D161D201B49345E7390B6806C47BE84DDA1054BCD6A5DAF986C919FC8BAE6C611004495715C133E89E0CB22BB3A817978CED11080B6610C0F8EF74BBC86E65CA1E181C81673D5866F67B76DB5102F032D32316C953DEFB7F9843BB6AD3241E8AC83F111AD045AD8C6C79EAF789571E4001D519D18D95127A8A207D642D3EFA6982173B921FC3D9E7C4A9BC95BE9659D286E8B8764F41B007D9712694BEF750AF45C1C6598659227282E83B39B6BED81FB9BD9D21523ED5B70724EE91305A9BA8ABB800E8C9F10134A32020B3F367D47B5FD5B639AA6917BE439626ED641B7CAEA0ED06C7156E185F149A125F1A17C764B705A7D3702272249D775</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-04-20T21:44:05</elem>
+<elem key="notAfter">2021-10-20T21:44:05</elem>
+</table>
+<elem key="md5">17d78a463cbdafbfcb2e248c235581c0</elem>
+<elem key="sha1">c0055351ef58067a73d2fd6a0c910b5ea6303c33</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC9DCCAdygAwIBAgIQLbnnoNXDQLNBwxM6w8EUQTANBgkqhkiG9w0BAQsFADAj&#xa;MSEwHwYDVQQDExh0cnVua3MuY2Fwc3VsZWNvcnAubG9jYWwwHhcNMjEwNDIwMjE0&#xa;NDA1WhcNMjExMDIwMjE0NDA1WjAjMSEwHwYDVQQDExh0cnVua3MuY2Fwc3VsZWNv&#xa;cnAubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCtZFw64p0W&#xa;HSAbSTRec5C2gGxHvoTdoQVLzWpdr5hskZ/IuubGEQBElXFcEz6J4MsiuzqBeXjO&#xa;0RCAtmEMD473S7yG5lyh4YHIFnPVhm9nt221EC8DLTIxbJU977f5hDu2rTJB6KyD&#xa;8RGtBFrYxseer3iVceQAHVGdGNlRJ6iiB9ZC0++mmCFzuSH8PZ58SpvJW+llnShu&#xa;i4dk9BsAfZcSaUvvdQr0XBxlmGWSJygug7Oba+2B+5vZ0hUj7Vtwck7pEwWpuoq7&#xa;gA6MnxATSjICCz82fUe1/VtjmqaRe+Q5Ym7WQbfK6g7QbHFW4YXxSaEl8aF8dktw&#xa;Wn03AiciSdd1AgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQE&#xa;AwIEMDANBgkqhkiG9w0BAQsFAAOCAQEAFYA9I7h6PdH+vbaFfZgckhjuhLNzPp2U&#xa;x90Z8nuqTinLRX3aZAL9QutE0ijSdHVYPcYWsuxKLCDmmom8amBDit/9f/x9Yy5J&#xa;GFIbdpGgnfE7wGvOSLM9GgVZBJGjXH/isFGneCZmCMVvYhYGzvAVazxAq50nNQVa&#xa;WwAsiTdhqwsbOeruxkq/qsD5GYwc5niugFkSIDrnhFFL2EJOhzGEG5sN5sBl27E4&#xa;d7TapIOEYVzrJf0h5WzM3xkFDXqDgAJTtI6xk6wSRUlFourfOe1qwiQ4frjVfe5E&#xa;knwb1TOTBZrQv9KOvJg1aJxb2HzNL7sTZ824mx0b7+joqovM37ssTA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-04-22T23:10:12+00:00; +1s from scanner time."><elem key="delta">1.0</elem>
+<elem key="date">2021-04-22T23:10:12+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ajp13" product="Apache Jserv" extrainfo="Protocol v1.3" method="probed" conf="10"/><script id="ajp-methods" output="&#xa;  Supported methods: GET HEAD POST OPTIONS&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache Tomcat" version="9.0.30" method="probed" conf="10"><cpe>cpe:/a:apache:tomcat:9.0.30</cpe></service><script id="http-favicon" output="Apache Tomcat"/><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-title" output="Apache Tomcat/9.0.30"><elem key="title">Apache Tomcat/9.0.30</elem>
+</script></port>
+</ports>
+<hostscript><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-04-22T23:09:41&#xa;  start_date: N/A"><elem key="date">2021-04-22T23:09:41</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="2623" rttvar="2374" to="100000"/>
+</host>
+<host starttime="1619133012" endtime="1619133198"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.28.128.104" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-response" count="65532" proto="tcp" ports="0-134,136-444,446-3388,3390-5984,5986-65535"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Windows 7 Professional 7601 Service Pack 1 microsoft-ds" extrainfo="workgroup: CAPSULECORP" hostname="TIEN" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="rdp-ntlm-info" output="&#xa;  Target_Name: CAPSULECORP&#xa;  NetBIOS_Domain_Name: CAPSULECORP&#xa;  NetBIOS_Computer_Name: TIEN&#xa;  DNS_Domain_Name: capsulecorp.local&#xa;  DNS_Computer_Name: tien.capsulecorp.local&#xa;  Product_Version: 6.1.7601&#xa;  System_Time: 2021-04-22T23:12:38+00:00"><elem key="Target_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Domain_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Computer_Name">TIEN</elem>
+<elem key="DNS_Domain_Name">capsulecorp.local</elem>
+<elem key="DNS_Computer_Name">tien.capsulecorp.local</elem>
+<elem key="Product_Version">6.1.7601</elem>
+<elem key="System_Time">2021-04-22T23:12:38+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=tien.capsulecorp.local&#xa;Not valid before: 2021-04-21T20:40:19&#xa;Not valid after:  2021-10-21T20:40:19"><table key="subject">
+<elem key="commonName">tien.capsulecorp.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">tien.capsulecorp.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">916EC81712F3E2360CC447B6B38F566B1EB2BC61756E94AA08A1D2E4F87D073EFF4C1FF308F572728EFB2267BEDB0FBA4A9010485A5E7FF2E8E0AFDBF8DEEF370B052E18AF7867A46EAED6E391250DE124CD60AC53EAA2B0F0D2AB7AFB09E6FC7811C19429C4E702DE7621A61F4F49D662E4A0D4C2D6628F98E57DB88735AB46A13812E0D6EFDADD645E5116328CBB3C64B7D1A374BD3853DB1D7400BC9BB6458D4316F43A2B63D93ACF7CF8827A487AB4CDF2E6167ACC351DDA571460A3CCA076881494C1FDDABEAC0B5CAC5D8136D7DEB8BF211A17C11236456414A66F6579A1683D4D3F4DA98487AFFA731AE4D07250215274EF7A04ECA6516D92E534FDCD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-04-21T20:40:19</elem>
+<elem key="notAfter">2021-10-21T20:40:19</elem>
+</table>
+<elem key="md5">c85e431fe213ce34bb1b0a8c88eb1b1a</elem>
+<elem key="sha1">3095486a823160c0cbe86a5620038eadb1ef4ff8</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC8DCCAdigAwIBAgIQLb7yYHasvI5LweXUBNhI3DANBgkqhkiG9w0BAQUFADAh&#xa;MR8wHQYDVQQDExZ0aWVuLmNhcHN1bGVjb3JwLmxvY2FsMB4XDTIxMDQyMTIwNDAx&#xa;OVoXDTIxMTAyMTIwNDAxOVowITEfMB0GA1UEAxMWdGllbi5jYXBzdWxlY29ycC5s&#xa;b2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJFuyBcS8+I2DMRH&#xa;trOPVmsesrxhdW6Uqgih0uT4fQc+/0wf8wj1cnKO+yJnvtsPukqQEEhaXn/y6OCv&#xa;2/je7zcLBS4Yr3hnpG6u1uORJQ3hJM1grFPqorDw0qt6+wnm/HgRwZQpxOcC3nYh&#xa;ph9PSdZi5KDUwtZij5jlfbiHNatGoTgS4Nbv2t1kXlEWMoy7PGS30aN0vThT2x10&#xa;ALybtkWNQxb0Oitj2TrPfPiCekh6tM3y5hZ6zDUd2lcUYKPMoHaIFJTB/dq+rAtc&#xa;rF2BNtfeuL8hGhfBEjZFZBSmb2V5oWg9TT9NqYSHr/pzGuTQclAhUnTvegTsplFt&#xa;kuU0/c0CAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQw&#xa;MA0GCSqGSIb3DQEBBQUAA4IBAQBrjBntJ8ZneZFkyf8JRjF5zaTPwwtzGweFqSXp&#xa;3+ZXkzkDRbk9QWBE4qxF3TnuAWosQteEKb2MRGgUs3x5oaOQtjgC8zky+ijrIYBS&#xa;tKETe2Q+MZLHSJOphEBaNzvkpB+KeD1aOZTaQ9hrLCUg0yUaG1fNLQqks9bvnnGM&#xa;tvL0+HGRkKop4sKljxRh4MI+FjkmD8wzFb5T3ABIFyubWfrfe9GmG2YzCBfF1z+y&#xa;jcE4C6LBwoEGdazOk6mj70AEafCxS9oVkZQIwRhrWUzG0psxc/QulLpn8R/A3DGy&#xa;p2e2j7FpFWMEiMNasvcp5WwPHmvUMoiO3qogXdAMz50efkuZ&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-04-22T23:13:18+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2021-04-22T23:13:18+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: 1h24m00s, deviation: 3h07m51s, median: 0s"><elem key="mean">5040</elem>
+<elem key="stddev">11271</elem>
+<elem key="median">0</elem>
+<elem key="count">5</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_7::sp1:professional&#xa;  Computer name: tien&#xa;  NetBIOS computer name: TIEN\x00&#xa;  Domain name: capsulecorp.local&#xa;  Forest name: capsulecorp.local&#xa;  FQDN: tien.capsulecorp.local&#xa;  System time: 2021-04-22T16:12:40-07:00&#xa;"><elem key="os">Windows 7 Professional 7601 Service Pack 1</elem>
+<elem key="lanmanager">Windows 7 Professional 6.1</elem>
+<elem key="server">TIEN\x00</elem>
+<elem key="date">2021-04-22T16:12:40-07:00</elem>
+<elem key="fqdn">tien.capsulecorp.local</elem>
+<elem key="domain_dns">capsulecorp.local</elem>
+<elem key="forest_dns">capsulecorp.local</elem>
+<elem key="workgroup">CAPSULECORP\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_7::sp1:professional</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.1: &#xa;    Message signing enabled but not required"><table key="2.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-04-22T23:12:46&#xa;  start_date: 2021-04-22T21:28:17"><elem key="date">2021-04-22T23:12:46</elem>
+<elem key="start_date">2021-04-22T21:28:17</elem>
+</script></hostscript><times srtt="2374" rttvar="2408" to="100000"/>
+</host>
+<host starttime="1619133012" endtime="1619133198"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.28.128.105" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-response" count="65533" proto="tcp" ports="0-444,446-3388,3390-5984,5986-65535"/>
+</extraports>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: CAPSULECORP&#xa;  NetBIOS_Domain_Name: CAPSULECORP&#xa;  NetBIOS_Computer_Name: RADITZ&#xa;  DNS_Domain_Name: capsulecorp.local&#xa;  DNS_Computer_Name: raditz.capsulecorp.local&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2021-04-22T23:12:38+00:00"><elem key="Target_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Domain_Name">CAPSULECORP</elem>
+<elem key="NetBIOS_Computer_Name">RADITZ</elem>
+<elem key="DNS_Domain_Name">capsulecorp.local</elem>
+<elem key="DNS_Computer_Name">raditz.capsulecorp.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2021-04-22T23:12:38+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=raditz.capsulecorp.local&#xa;Not valid before: 2021-04-21T20:46:41&#xa;Not valid after:  2021-10-21T20:46:41"><table key="subject">
+<elem key="commonName">raditz.capsulecorp.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">raditz.capsulecorp.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">AEFBE9CE4D546D8E92A6D16049BF794995CCBB5A490796C9FB3C221EEF2F44AE98618F3C25FD4174F1FA7A2A1C583CD7A719227D141EAA918912C3BBB68A8857DA0AA1BE45AF82A24CEC2340A390ABDEBE8D21FD8850001FFA1CFC89CCE051B13AA3244A8EACFCF0377B1B793C610040BDAFD5758F03465B67D0AEC14375F78F8E700803640D19FE2A303084BA6AD3EF128F515A39D2A55A2E6CA025F4A7BDF81CC8D958F3646D093DC5C848F7E6ADD0342E6ADC48FEA9D78CB0DF68E054A99A40BE098D5C1B0613095EC09376D9A3D29FCE4837A80F534521C2C780BAE3FD9B46449ECE5EC5BC708715CE48107479B123ED9A5EE4BE1B8FF00D07EEC73C9631</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-04-21T20:46:41</elem>
+<elem key="notAfter">2021-10-21T20:46:41</elem>
+</table>
+<elem key="md5">4e729936b26830674246b5aeb7d9ee72</elem>
+<elem key="sha1">fa172299c3b972c8254297c750dcce92d90f0ca3</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC9DCCAdygAwIBAgIQXicMme6iKqFPoUsVOYx8MjANBgkqhkiG9w0BAQsFADAj&#xa;MSEwHwYDVQQDExhyYWRpdHouY2Fwc3VsZWNvcnAubG9jYWwwHhcNMjEwNDIxMjA0&#xa;NjQxWhcNMjExMDIxMjA0NjQxWjAjMSEwHwYDVQQDExhyYWRpdHouY2Fwc3VsZWNv&#xa;cnAubG9jYWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCu++nOTVRt&#xa;jpKm0WBJv3lJlcy7WkkHlsn7PCIe7y9Erphhjzwl/UF08fp6KhxYPNenGSJ9FB6q&#xa;kYkSw7u2iohX2gqhvkWvgqJM7CNAo5Cr3r6NIf2IUAAf+hz8iczgUbE6oyRKjqz8&#xa;8Dd7G3k8YQBAva/VdY8DRltn0K7BQ3X3j45wCANkDRn+KjAwhLpq0+8Sj1FaOdKl&#xa;Wi5soCX0p734HMjZWPNkbQk9xchI9+at0DQuatxI/qnXjLDfaOBUqZpAvgmNXBsG&#xa;EwlewJN22aPSn85IN6gPU0UhwseAuuP9m0ZEns5exbxwhxXOSBB0ebEj7Zpe5L4b&#xa;j/ANB+7HPJYxAgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQE&#xa;AwIEMDANBgkqhkiG9w0BAQsFAAOCAQEATmaj5dge0BFAfMPAnK1EpO+C5PF9WNQO&#xa;ZLldf1/wMOZ0UvCnyPktdat6dkS28sUcf58BBaQEzU2odnLTUJKcbUk7hTXIt4Z2&#xa;5lNsvV7gEm/gB7mKpPnFyXZiY6ykVEV82aRA+iHTXUyIHOE8RVAv151BXLEV54/i&#xa;tTYm50oGpVwNihK9tWKSuptGqbdZ6g+ZnMBbseogQqHnPC5js+MBqcieAmt8lLKM&#xa;3f4m7mYaT3DC4AAIRXJx2Nzb183cyqH7G/Qi6XJSPj7LWFjijg50yowfmgxl13J8&#xa;g3FQgTMpcU9vxwd27PbFPK1MQiA8aa3ZFP+ibwY9AZGtR1/ZQRJ81Q==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2021-04-22T23:13:18+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2021-04-22T23:13:18+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+</ports>
+<hostscript><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-04-22T23:12:42&#xa;  start_date: N/A"><elem key="date">2021-04-22T23:12:42</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="2363" rttvar="2360" to="100000"/>
+</host>
+<postscript><script id="clock-skew" output="&#xa;  0s: &#xa;    172.28.128.102&#xa;    172.28.128.101&#xa;    172.28.128.103&#xa;    172.28.128.100&#xa;    172.28.128.104&#xa;    172.28.128.105"><table key="0s">
+<elem>172.28.128.102</elem>
+<elem>172.28.128.101</elem>
+<elem>172.28.128.103</elem>
+<elem>172.28.128.100</elem>
+<elem>172.28.128.104</elem>
+<elem>172.28.128.105</elem>
+</table>
+</script></postscript><runstats><finished time="1619133198" timestr="Thu Apr 22 18:13:18 2021" summary="Nmap done at Thu Apr 22 18:13:18 2021; 6 IP addresses (6 hosts up) scanned in 395.43 seconds" elapsed="395.43" exit="success"/><hosts up="6" down="0" total="6"/>
+</runstats>
+</nmaprun>

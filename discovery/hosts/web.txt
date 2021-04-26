@@ -1,0 +1,14 @@
+IP			PORT		SERVICE		VERSION
+
+172.28.128.104		5985		http		Microsoft HTTPAPI httpd	2.0	SSDP/UPnP
+172.28.128.103		8080		http		Apache Tomcat	9.0.30	
+172.28.128.103		8009		ajp13		Apache Jserv		Protocol v1.3
+172.28.128.103		5985		http		Microsoft HTTPAPI httpd	2.0	SSDP/UPnP
+172.28.128.102		8080		http		Jetty	9.4.27.v20200227	
+172.28.128.102		5985		http		Microsoft HTTPAPI httpd	2.0	SSDP/UPnP
+172.28.128.101		5985		http		Microsoft HTTPAPI httpd	2.0	SSDP/UPnP
+172.28.128.101		80		http		Microsoft IIS httpd	10.0	
+172.28.128.100		49670		ncacn_http	Microsoft Windows RPC over HTTP	1.0	
+172.28.128.100		5985		http		Microsoft HTTPAPI httpd	2.0	SSDP/UPnP
+172.28.128.100		593		ncacn_http	Microsoft Windows RPC over HTTP	1.0	
+

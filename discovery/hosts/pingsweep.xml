@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91SVN scan initiated Thu Apr 22 17:29:34 2021 as: nmap -sn -iL ranges.txt -oA hosts/pingsweep -PE -->
+<nmaprun scanner="nmap" args="nmap -sn -iL ranges.txt -oA hosts/pingsweep -PE" start="1619130574" startstr="Thu Apr 22 17:29:34 2021" version="7.91SVN" xmloutputversion="1.05">
+<verbose level="0"/>
+<debugging level="0"/>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.128.1" addrtype="ipv4"/>
+<address addr="0A:00:27:00:00:00" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<times srtt="254" rttvar="3778" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.128.100" addrtype="ipv4"/>
+<address addr="08:00:27:4E:B7:04" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<times srtt="261" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.128.101" addrtype="ipv4"/>
+<address addr="08:00:27:E9:4F:09" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<times srtt="242" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.128.102" addrtype="ipv4"/>
+<address addr="08:00:27:AE:4D:87" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<times srtt="432" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.128.103" addrtype="ipv4"/>
+<address addr="08:00:27:4A:A9:EC" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<times srtt="423" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.128.104" addrtype="ipv4"/>
+<address addr="08:00:27:38:67:E5" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<times srtt="232" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.128.105" addrtype="ipv4"/>
+<address addr="08:00:27:EB:15:CE" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<times srtt="320" rttvar="1646" to="100000"/>
+</host>
+<host><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="172.28.128.200" addrtype="ipv4"/>
+<hostnames>
+<hostname name="pentest" type="PTR"/>
+</hostnames>
+</host>
+<runstats><finished time="1619130599" timestr="Thu Apr 22 17:29:59 2021" summary="Nmap done at Thu Apr 22 17:29:59 2021; 256 IP addresses (8 hosts up) scanned in 25.54 seconds" elapsed="25.54" exit="success"/><hosts up="8" down="248" total="256"/>
+</runstats>
+</nmaprun>

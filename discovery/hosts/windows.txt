@@ -1,0 +1,33 @@
+IP                      PORT				SERVICE			VERSION
+
+172.28.128.104		3389				ms-wbt-server			
+172.28.128.104		445				microsoft-ds		Windows 7 Professional 7601 Service Pack 1 microsoft-ds
+172.28.128.104		135				msrpc			Microsoft Windows RPC		
+172.28.128.103		3389				ms-wbt-server		Microsoft Terminal Services		
+172.28.128.103		445				microsoft-ds			
+172.28.128.102		3389				ms-wbt-server		Microsoft Terminal Services		
+172.28.128.102		445				microsoft-ds			
+172.28.128.101		49695				msrpc			Microsoft Windows RPC		
+172.28.128.101		2103				msrpc			Microsoft Windows RPC		
+172.28.128.101		2105				msrpc			Microsoft Windows RPC		
+172.28.128.101		2107				msrpc			Microsoft Windows RPC		
+172.28.128.101		1801				msmq			
+172.28.128.101		445				microsoft-ds			
+172.28.128.100		49672				msrpc			Microsoft Windows RPC		
+172.28.128.100		49685				msrpc			Microsoft Windows RPC		
+172.28.128.100		53368				msrpc			Microsoft Windows RPC		
+172.28.128.100		49666				msrpc			Microsoft Windows RPC		
+172.28.128.100		49667				msrpc			Microsoft Windows RPC		
+172.28.128.100		49669				msrpc			Microsoft Windows RPC	
+172.28.128.100		9389				mc-nmf			.NET Message Framing		
+172.28.128.100		3389				ms-wbt-server		Microsoft Terminal Services		
+172.28.128.100		3268				ldap			Microsoft Windows Active Directory LDAP		
+172.28.128.100		445				microsoft-ds			
+172.28.128.100		389				ldap			Microsoft Windows Active Directory LDAP		
+172.28.128.100		139				netbios-ssn		Microsoft Windows netbios-ssn		
+172.28.128.100		135				msrpc			Microsoft Windows RPC		
+172.28.128.100		88				kerberos-sec		Microsoft Windows Kerberos		
+172.28.128.100		22				ssh			OpenSSH	for_Windows_8.0	protocol 2.0
+172.28.128.100		464				kpasswd5		The kpasswd command is used to change a Kerberos principal’s password
+	
+

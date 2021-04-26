@@ -1,0 +1,4 @@
+IP			PORT	SERVICE			VERSION
+
+172.28.128.101		3389	ms-wbt-server		Microsoft Terminal Services - Microsoft SQL Server 2017 RTM		
+

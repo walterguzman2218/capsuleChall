@@ -1,0 +1,10 @@
+# Nmap 7.91SVN scan initiated Thu Apr 22 17:29:34 2021 as: nmap -sn -iL ranges.txt -oA hosts/pingsweep -PE
+Host: 172.28.128.1 ()	Status: Up
+Host: 172.28.128.100 ()	Status: Up
+Host: 172.28.128.101 ()	Status: Up
+Host: 172.28.128.102 ()	Status: Up
+Host: 172.28.128.103 ()	Status: Up
+Host: 172.28.128.104 ()	Status: Up
+Host: 172.28.128.105 ()	Status: Up
+Host: 172.28.128.200 (pentest)	Status: Up
+# Nmap done at Thu Apr 22 17:29:59 2021 -- 256 IP addresses (8 hosts up) scanned in 25.54 seconds

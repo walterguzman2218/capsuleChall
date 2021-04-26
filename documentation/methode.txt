@@ -1,0 +1,138 @@
+***************************************************     [ HOSTS DISCOVERY ]     *****************************************************************  
+
+#get our ip address
+ifconfig
+172.28.128.200
+255.255.255.0
+172.28.128.200/24
+
+# create a range of ip in /discovery/range.txt
+172.28.128.0/24
+
+# Nmap host discovery utilizing ICMP
+# -sn: Ping Scan - disable port scan
+# -iL <inputfilename>: Input from list of hosts/networks
+# -oA <basename>: Output in the three major formats at once
+# -PE/PP/PM: ICMP echo, timestamp, and netmask request discovery probes
+sudo nmap -sn -iL discovery/ranges.txt -oA discovery/hosts/pingsweep -PE
+
+# places all the IP addresses from hosts that are up in discovery/hosts/targets.txt
+grep "Up" discovery/hosts/pingsweep.gnmap | cut -d " " -f2 > targets.txt
+
+# to discover tricky hosts that are configured to ignore ICMP probes use remote management interface (RMI) port-detection method
+# Microsoft Remote Desktop (RDP): TCP 3389
+# Secure Shell (SSH): TCP 22
+# Secure Shell (SSH): TCP 2222
+# HTTP/HTTPS: TCP 80, 443 
+nmap -Pn -n -p 22,80,443,3389,2222 -iL ranges.txt  -oA hosts/rmisweep  --min-rate 1280
+# -Pn: Treat all hosts as online -- skip host discovery
+# -n/-R: Never do DNS resolution/Always resolve [default: sometimes]
+# -p <port ranges>: Only scan specified ports
+# --min-rate: to speed up Nmap
+
+# get the result of rmisweep with ip addresses that have open ports 
+cat hosts/rmisweep.gnmap | grep open | cut -d " " -f2
+
+
+
+***************************************************     [ NETWORK SERVICES DISCOVERY ]     **********************************************************
+
+# use nmap to check for common ports
+nmap -Pn -n -p 22,25,53,80,443,445,1433,3306,3389,5800,5900,8080,8443  -iL hosts/targets.txt -oA services/quick-sweep
+
+# get only the open ports results from the quick-sweep
+cat services/quick-sweep.gnmap | grep open
+
+# scanning all ports with service probes and script scanning
+nmap -Pn -n -iL hosts/targets.txt -p 0-65535 -sV -A -oA services/full-sweep --min-rate 50000
+# -sV: Probe open ports to determine service/version info
+# -A: Enable OS detection, version detection, script scanning, and traceroute
+
+
+# install nmap XML parsing script
+git clone https://github.com/R3dy/parsenmap.git
+cd parsenmap
+bundle install
+./parsenmap.rb
+
+# create a symbolic link to the executable somewhere that is accessible from my $PATH environment variable
+nano .bashrc
+if [ -d "$HOME/bin" ] ; then
+  PATH="$PATH:$HOME/bin"
+fi
+
+# eload the profile with source ~/.bash_ profile for the changes to take effect
+source ~/.bashrc
+
+# create a symbolic link
+sudo ln -s ~/parsenmap/parsenmap.rb /bin/parsenmap
+
+# now u can call parsenmap from anywhere and here we are gonna parse the previously full-sweep we made with the full ports scan !
+parsenmap doscovery/services/full-sweep.xml
+
+# create a csv with the result
+parsenmap discovery/services/full-sweep.xml > discovery/services/full-ports.csv
+
+# create files to target services in discovery/hosts
+web.txt
+windows.txt
+mssql.txt
+
+# create a last one file for tcpwrapped
+# we're going to perform a SYNC SCAN on those ips and ports
+sudo nmap -sS -iL tcpwrapped.txt -p 636,3269
+
+# and then fill the tcpwrapped with the infos you got
+nano tcpwrapped.txt
+
+# we’ll use these target files to start hunting for vulnerable attack vectors 
+# we'll use the information obtained during this network services discovery phase to build protocol-specific target lists for the next sub-phase: vulnerability discovery. 
+
+
+***************************************************     [ VULNERABILITY DISCOVERY ]     **********************************************************
+
+
+
+
+################ [ PATCHING VELNERABILITY DISCOVERY ] ################
+
+ 
+# Metasploit framework have an auxiliary module for quickly and reliably identifying a LHF (low-hanging-fruit) Windows vulnerability frequently used by attackers:
+# the MS17-010 (Eternal Blue) vulnerability
+
+# we use CME to identify CME to identify the Windows version
+cme smb windows.txt 
+
+# host 10.0.10.208 is running Windows 6.1 so we are going to serach for vulnerability in the public exploit database (https://www.exploit-db.com) 
+# we are gonna use Metasploit  auxiliary scan module to check for MS17-010 vuln
+# in order to be able tu use metasploit use the following commands:
+cd
+cd msf/
+bundle install
+./msfconsole
+
+
+# when you are in msfconsole show the auxiliary's
+show auxiliary
+
+# search for /auxiliary/scan/smb/smb_ms17_010
+# and then select it
+use auxiliary/smb/smb_ms17_010
+
+# show parameters to set
+options
+
+# you just need to set RHOSTS
+set RHOSTS file:/home/pentest/capsule/discovery/hosts/targets.txt
+
+# run the scan
+run
+
+# Running the MS17-010 scanner module shows that the host is Windows 7 and is likely vulnerable to the attack
+# If you read the source code for the scanner module, you can see that during the SMB handshake, it checks for the presence of a string that isn’t present on patched systems
+# This means there is a relatively low likelihood of the results being a false positive
+
+
+
+################ [ AUTHENTIFICATION VELNERABILITY DISCOVERY ] ################ 
+
