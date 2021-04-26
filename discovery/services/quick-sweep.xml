@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.91SVN scan initiated Thu Apr 22 17:57:58 2021 as: nmap -Pn -n -p 22,25,53,80,443,445,1433,3306,3389,5800,5900,8080,8443 -iL hosts/targets.txt -oA services/quick-sweep -->
-<nmaprun scanner="nmap" args="nmap -Pn -n -p 22,25,53,80,443,445,1433,3306,3389,5800,5900,8080,8443 -iL hosts/targets.txt -oA services/quick-sweep" start="1619132278" startstr="Thu Apr 22 17:57:58 2021" version="7.91SVN" xmloutputversion="1.05">
+<!-- Nmap 7.91SVN scan initiated Mon Apr 26 03:34:23 2021 as: nmap -Pn -n -p 22,25,53,80,443,445,1433,3306,3389,5800,5900,8080,8443 -iL discovery/hosts/targets.txt -oA discovery/services/quick-sweep -->
+<nmaprun scanner="nmap" args="nmap -Pn -n -p 22,25,53,80,443,445,1433,3306,3389,5800,5900,8080,8443 -iL discovery/hosts/targets.txt -oA discovery/services/quick-sweep" start="1619426063" startstr="Mon Apr 26 03:34:23 2021" version="7.91SVN" xmloutputversion="1.05">
 <scaninfo type="connect" protocol="tcp" numservices="13" services="22,25,53,80,443,445,1433,3306,3389,5800,5900,8080,8443"/>
 <verbose level="0"/>
 <debugging level="0"/>
-<host starttime="1619132278" endtime="1619132279"><status state="up" reason="user-set" reason_ttl="0"/>
+<host starttime="1619426063" endtime="1619426066"><status state="up" reason="user-set" reason_ttl="0"/>
 <address addr="172.28.128.100" addrtype="ipv4"/>
 <hostnames>
 </hostnames>
@@ -24,9 +24,9 @@
 <port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
 <port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
 </ports>
-<times srtt="557" rttvar="2221" to="100000"/>
+<times srtt="640" rttvar="2638" to="100000"/>
 </host>
-<host starttime="1619132278" endtime="1619132279"><status state="up" reason="user-set" reason_ttl="0"/>
+<host starttime="1619426063" endtime="1619426066"><status state="up" reason="user-set" reason_ttl="0"/>
 <address addr="172.28.128.101" addrtype="ipv4"/>
 <hostnames>
 </hostnames>
@@ -44,9 +44,9 @@
 <port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
 <port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
 </ports>
-<times srtt="12666" rttvar="15684" to="100000"/>
+<times srtt="465" rttvar="2971" to="100000"/>
 </host>
-<host starttime="1619132278" endtime="1619132279"><status state="up" reason="user-set" reason_ttl="0"/>
+<host starttime="1619426063" endtime="1619426066"><status state="up" reason="user-set" reason_ttl="0"/>
 <address addr="172.28.128.102" addrtype="ipv4"/>
 <hostnames>
 </hostnames>
@@ -64,9 +64,9 @@
 <port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
 <port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
 </ports>
-<times srtt="360" rttvar="2892" to="100000"/>
+<times srtt="545" rttvar="3145" to="100000"/>
 </host>
-<host starttime="1619132278" endtime="1619132279"><status state="up" reason="user-set" reason_ttl="0"/>
+<host starttime="1619426063" endtime="1619426066"><status state="up" reason="user-set" reason_ttl="0"/>
 <address addr="172.28.128.103" addrtype="ipv4"/>
 <hostnames>
 </hostnames>
@@ -84,9 +84,9 @@
 <port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
 <port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
 </ports>
-<times srtt="854" rttvar="3019" to="100000"/>
+<times srtt="624" rttvar="3074" to="100000"/>
 </host>
-<host starttime="1619132278" endtime="1619132279"><status state="up" reason="user-set" reason_ttl="0"/>
+<host starttime="1619426063" endtime="1619426066"><status state="up" reason="user-set" reason_ttl="0"/>
 <address addr="172.28.128.104" addrtype="ipv4"/>
 <hostnames>
 </hostnames>
@@ -104,28 +104,8 @@
 <port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
 <port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
 </ports>
-<times srtt="677" rttvar="3814" to="100000"/>
+<times srtt="515" rttvar="3926" to="100000"/>
 </host>
-<host starttime="1619132278" endtime="1619132279"><status state="up" reason="user-set" reason_ttl="0"/>
-<address addr="172.28.128.105" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<ports><port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
-<port protocol="tcp" portid="25"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="smtp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="53"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
-<port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
-<port protocol="tcp" portid="443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
-<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
-<port protocol="tcp" portid="1433"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ms-sql-s" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3306"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" method="table" conf="3"/></port>
-<port protocol="tcp" portid="5800"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="vnc-http" method="table" conf="3"/></port>
-<port protocol="tcp" portid="5900"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="vnc" method="table" conf="3"/></port>
-<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
-<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
-</ports>
-<times srtt="644" rttvar="3819" to="100000"/>
-</host>
-<runstats><finished time="1619132279" timestr="Thu Apr 22 17:57:59 2021" summary="Nmap done at Thu Apr 22 17:57:59 2021; 6 IP addresses (6 hosts up) scanned in 1.54 seconds" elapsed="1.54" exit="success"/><hosts up="6" down="0" total="6"/>
+<runstats><finished time="1619426066" timestr="Mon Apr 26 03:34:26 2021" summary="Nmap done at Mon Apr 26 03:34:26 2021; 5 IP addresses (5 hosts up) scanned in 3.26 seconds" elapsed="3.26" exit="success"/><hosts up="5" down="0" total="5"/>
 </runstats>
 </nmaprun>

@@ -44,7 +44,7 @@ nmap -Pn -n -p 22,25,53,80,443,445,1433,3306,3389,5800,5900,8080,8443  -iL hosts
 cat services/quick-sweep.gnmap | grep open
 
 # scanning all ports with service probes and script scanning
-nmap -Pn -n -iL hosts/targets.txt -p 0-65535 -sV -A -oA services/full-sweep --min-rate 50000
+nmap -Pn -n -iL hosts/targets.txt -p 0-65535 -sV -A -oA services/full-sweep --min-rate 5000
 # -sV: Probe open ports to determine service/version info
 # -A: Enable OS detection, version detection, script scanning, and traceroute
 
@@ -68,7 +68,7 @@ source ~/.bashrc
 sudo ln -s ~/parsenmap/parsenmap.rb /bin/parsenmap
 
 # now u can call parsenmap from anywhere and here we are gonna parse the previously full-sweep we made with the full ports scan !
-parsenmap doscovery/services/full-sweep.xml
+parsenmap discovery/services/full-sweep.xml
 
 # create a csv with the result
 parsenmap discovery/services/full-sweep.xml > discovery/services/full-ports.csv
