@@ -134,6 +134,7 @@ run
 172.28.128.104: 445 TIEN
 Windows 7 Professional 7601 service pack 1 x64
 
+
 ################ [ AUTHENTIFICATION VELNERABILITY DISCOVERY ] ################ 
 
 # run the cme command with the following options to iterate through your list of password guesses against 
