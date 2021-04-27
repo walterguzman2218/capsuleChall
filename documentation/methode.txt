@@ -146,6 +146,10 @@ Microsoft Windows RPC: 445 GOHAN
 username: sa 
 password: Password1
 
+# if you go to and http://172.28.128.102:8080 or http://172.28.128.103:8080 you can access it entering 
+#the following credentials:
+admin
+admin
 
 ################ [ CONFIGURATION VELNERABILITY DISCOVERY ] ################ 
 
