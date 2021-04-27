@@ -1,0 +1,14 @@
+# Nmap 7.91SVN scan initiated Tue Apr 27 07:51:25 2021 as: nmap -iL ../services/web.txt -oA .
+Nmap scan report for 172.28.128.101
+Host is up (0.00043s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+445/tcp  open  microsoft-ds
+1801/tcp open  msmq
+2103/tcp open  zephyr-clt
+2105/tcp open  eklogin
+2107/tcp open  msmq-mgmt
+3389/tcp open  ms-wbt-server
+
+# Nmap done at Tue Apr 27 07:51:31 2021 -- 5 IP addresses (1 host up) scanned in 6.11 seconds

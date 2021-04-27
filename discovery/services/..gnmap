@@ -1,0 +1,4 @@
+# Nmap 7.91SVN scan initiated Tue Apr 27 07:51:25 2021 as: nmap -iL ../services/web.txt -oA .
+Host: 172.28.128.101 ()	Status: Up
+Host: 172.28.128.101 ()	Ports: 80/open/tcp//http///, 445/open/tcp//microsoft-ds///, 1801/open/tcp//msmq///, 2103/open/tcp//zephyr-clt///, 2105/open/tcp//eklogin///, 2107/open/tcp//msmq-mgmt///, 3389/open/tcp//ms-wbt-server///	Ignored State: filtered (993)
+# Nmap done at Tue Apr 27 07:51:31 2021 -- 5 IP addresses (1 host up) scanned in 6.11 seconds
