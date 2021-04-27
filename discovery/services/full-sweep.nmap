@@ -1,6 +1,6 @@
-# Nmap 7.91SVN scan initiated Mon Apr 26 03:35:17 2021 as: nmap -Pn -n -iL discovery/hosts/targets.txt -p 0-65535 -sV -A -oA discovery/services/full-sweep --min-rate 5000
+# Nmap 7.91SVN scan initiated Tue Apr 27 07:57:00 2021 as: nmap -Pn -n -iL discovery/hosts/targets.txt -p 0-65535 -sV -A -oA discovery/services/full-sweep --min-rate 5000
 Nmap scan report for 172.28.128.100
-Host is up (0.00028s latency).
+Host is up (0.00051s latency).
 Not shown: 65514 filtered tcp ports (no-response)
 PORT      STATE SERVICE       VERSION
 22/tcp    open  ssh           OpenSSH for_Windows_8.0 (protocol 2.0)
@@ -9,7 +9,7 @@ PORT      STATE SERVICE       VERSION
 |   256 3e:bf:61:40:34:3c:c0:be:68:95:cd:ba:c9:d9:b2:ca (ECDSA)
 |_  256 03:9d:11:6d:69:41:11:57:f9:73:f0:2f:15:ce:3a:8e (ED25519)
 53/tcp    open  domain        Simple DNS Plus
-88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2021-04-26 08:37:08Z)
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2021-04-27 12:58:51Z)
 135/tcp   open  msrpc         Microsoft Windows RPC
 139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
 389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: capsulecorp.local0., Site: Default-First-Site-Name)
@@ -28,22 +28,22 @@ PORT      STATE SERVICE       VERSION
 |   DNS_Computer_Name: goku.capsulecorp.local
 |   DNS_Tree_Name: capsulecorp.local
 |   Product_Version: 10.0.17763
-|_  System_Time: 2021-04-26T08:38:05+00:00
+|_  System_Time: 2021-04-27T12:59:45+00:00
 | ssl-cert: Subject: commonName=goku.capsulecorp.local
 | Not valid before: 2021-04-20T20:02:02
 |_Not valid after:  2021-10-20T20:02:02
-|_ssl-date: 2021-04-26T08:38:44+00:00; 0s from scanner time.
+|_ssl-date: 2021-04-27T13:00:29+00:00; 0s from scanner time.
 5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
 |_http-server-header: Microsoft-HTTPAPI/2.0
 |_http-title: Not Found
 9389/tcp  open  mc-nmf        .NET Message Framing
 49666/tcp open  msrpc         Microsoft Windows RPC
 49667/tcp open  msrpc         Microsoft Windows RPC
-49669/tcp open  msrpc         Microsoft Windows RPC
-49670/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+49669/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+49670/tcp open  msrpc         Microsoft Windows RPC
 49672/tcp open  msrpc         Microsoft Windows RPC
 49685/tcp open  msrpc         Microsoft Windows RPC
-49794/tcp open  msrpc         Microsoft Windows RPC
+56009/tcp open  msrpc         Microsoft Windows RPC
 Service Info: Host: GOKU; OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Host script results:
@@ -52,11 +52,11 @@ Host script results:
 |   3.1.1: 
 |_    Message signing enabled and required
 | smb2-time: 
-|   date: 2021-04-26T08:38:05
+|   date: 2021-04-27T12:59:49
 |_  start_date: N/A
 
 Nmap scan report for 172.28.128.101
-Host is up (0.00029s latency).
+Host is up (0.00062s latency).
 Not shown: 65527 filtered tcp ports (no-response)
 PORT      STATE SERVICE       VERSION
 80/tcp    open  http          Microsoft IIS httpd 10.0
@@ -78,11 +78,11 @@ PORT      STATE SERVICE       VERSION
 |   DNS_Computer_Name: gohan.capsulecorp.local
 |   DNS_Tree_Name: capsulecorp.local
 |   Product_Version: 10.0.17763
-|_  System_Time: 2021-04-26T08:38:04+00:00
+|_  System_Time: 2021-04-27T12:59:47+00:00
 | ssl-cert: Subject: commonName=gohan.capsulecorp.local
 | Not valid before: 2021-04-20T21:11:35
 |_Not valid after:  2021-10-20T21:11:35
-|_ssl-date: 2021-04-26T08:38:44+00:00; 0s from scanner time.
+|_ssl-date: 2021-04-27T13:00:29+00:00; 0s from scanner time.
 5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
 |_http-server-header: Microsoft-HTTPAPI/2.0
 |_http-title: Not Found
@@ -90,24 +90,15 @@ PORT      STATE SERVICE       VERSION
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Host script results:
-| ms-sql-info: 
-|   Windows server name: GOHAN
-|   172.28.128.101\CAPSULECORPDB: 
-|     Instance name: CAPSULECORPDB
-|     Version: 
-|       name: Microsoft SQL Server 2017 RTM
-|       Product: Microsoft SQL Server 2017
-|       Service pack level: RTM
-|_    Clustered: false
 | smb2-security-mode: 
 |   3.1.1: 
 |_    Message signing enabled but not required
 | smb2-time: 
-|   date: 2021-04-26T08:38:06
+|   date: 2021-04-27T12:59:48
 |_  start_date: N/A
 
 Nmap scan report for 172.28.128.102
-Host is up (0.00034s latency).
+Host is up (0.00049s latency).
 Not shown: 65532 filtered tcp ports (no-response)
 PORT     STATE SERVICE       VERSION
 445/tcp  open  microsoft-ds?
@@ -118,12 +109,13 @@ PORT     STATE SERVICE       VERSION
 |   NetBIOS_Computer_Name: VEGETA
 |   DNS_Domain_Name: capsulecorp.local
 |   DNS_Computer_Name: vegeta.capsulecorp.local
+|   DNS_Tree_Name: capsulecorp.local
 |   Product_Version: 10.0.17763
-|_  System_Time: 2021-04-26T08:38:03+00:00
+|_  System_Time: 2021-04-27T12:59:48+00:00
 | ssl-cert: Subject: commonName=vegeta.capsulecorp.local
 | Not valid before: 2021-04-20T21:25:52
 |_Not valid after:  2021-10-20T21:25:52
-|_ssl-date: 2021-04-26T08:38:44+00:00; 0s from scanner time.
+|_ssl-date: 2021-04-27T13:00:29+00:00; 0s from scanner time.
 5985/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
 |_http-server-header: Microsoft-HTTPAPI/2.0
 |_http-title: Not Found
@@ -131,7 +123,7 @@ PORT     STATE SERVICE       VERSION
 | http-robots.txt: 1 disallowed entry 
 |_/
 |_http-server-header: Jetty(9.4.27.v20200227)
-|_http-title: Dashboard [Jenkins]
+|_http-title: Site doesn't have a title (text/html;charset=utf-8).
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Host script results:
@@ -139,11 +131,11 @@ Host script results:
 |   3.1.1: 
 |_    Message signing enabled but not required
 | smb2-time: 
-|   date: 2021-04-26T08:38:12
+|   date: 2021-04-27T12:59:55
 |_  start_date: N/A
 
 Nmap scan report for 172.28.128.103
-Host is up (0.00029s latency).
+Host is up (0.00052s latency).
 Not shown: 65531 filtered tcp ports (no-response)
 PORT     STATE SERVICE       VERSION
 445/tcp  open  microsoft-ds?
@@ -154,12 +146,13 @@ PORT     STATE SERVICE       VERSION
 |   NetBIOS_Computer_Name: TRUNKS
 |   DNS_Domain_Name: capsulecorp.local
 |   DNS_Computer_Name: trunks.capsulecorp.local
+|   DNS_Tree_Name: capsulecorp.local
 |   Product_Version: 10.0.17763
-|_  System_Time: 2021-04-26T08:38:05+00:00
+|_  System_Time: 2021-04-27T12:59:49+00:00
 | ssl-cert: Subject: commonName=trunks.capsulecorp.local
 | Not valid before: 2021-04-20T21:44:05
 |_Not valid after:  2021-10-20T21:44:05
-|_ssl-date: 2021-04-26T08:38:44+00:00; 0s from scanner time.
+|_ssl-date: 2021-04-27T13:00:29+00:00; 0s from scanner time.
 5985/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
 |_http-server-header: Microsoft-HTTPAPI/2.0
 |_http-title: Not Found
@@ -177,11 +170,11 @@ Host script results:
 |   3.1.1: 
 |_    Message signing enabled but not required
 | smb2-time: 
-|   date: 2021-04-26T08:38:13
+|   date: 2021-04-27T12:59:56
 |_  start_date: N/A
 
 Nmap scan report for 172.28.128.104
-Host is up (0.00023s latency).
+Host is up (0.00044s latency).
 Not shown: 65532 filtered tcp ports (no-response)
 PORT     STATE SERVICE            VERSION
 135/tcp  open  msrpc              Microsoft Windows RPC
@@ -195,11 +188,11 @@ PORT     STATE SERVICE            VERSION
 |   DNS_Computer_Name: tien.capsulecorp.local
 |   DNS_Tree_Name: capsulecorp.local
 |   Product_Version: 6.1.7601
-|_  System_Time: 2021-04-26T08:40:44+00:00
+|_  System_Time: 2021-04-27T13:02:16+00:00
 | ssl-cert: Subject: commonName=tien.capsulecorp.local
 | Not valid before: 2021-04-21T20:40:19
 |_Not valid after:  2021-10-21T20:40:19
-|_ssl-date: 2021-04-26T08:41:24+00:00; +1s from scanner time.
+|_ssl-date: 2021-04-27T13:02:55+00:00; 0s from scanner time.
 5985/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
 |_http-server-header: Microsoft-HTTPAPI/2.0
 |_http-title: Not Found
@@ -215,7 +208,7 @@ Host script results:
 |   Domain name: capsulecorp.local
 |   Forest name: capsulecorp.local
 |   FQDN: tien.capsulecorp.local
-|_  System time: 2021-04-26T01:40:45-07:00
+|_  System time: 2021-04-27T06:02:16-07:00
 | smb-security-mode: 
 |   account_used: <blank>
 |   authentication_level: user
@@ -225,8 +218,8 @@ Host script results:
 |   2.1: 
 |_    Message signing enabled but not required
 | smb2-time: 
-|   date: 2021-04-26T08:40:47
-|_  start_date: 2021-04-26T07:45:09
+|   date: 2021-04-27T13:02:20
+|_  start_date: 2021-04-27T07:27:23
 
 Post-scan script results:
 | clock-skew: 
@@ -237,4 +230,4 @@ Post-scan script results:
 |     172.28.128.102
 |_    172.28.128.104
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Apr 26 03:41:23 2021 -- 5 IP addresses (5 hosts up) scanned in 366.52 seconds
+# Nmap done at Tue Apr 27 08:02:55 2021 -- 5 IP addresses (5 hosts up) scanned in 355.95 seconds
